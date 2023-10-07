@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <h1>Survey Form</h1>
+      <form id="survey-form">
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" required />
+
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" required />
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" required />
+
+        <label for="country">Country:</label>
+        <select id="country" required>
+          <option value="" disabled selected>Select your country</option>
+          <option value="USA">United States of America</option>
+          <option value="Canada">Canada</option>
+          <option value="UK">United Kingdom</option>
+          <option value="Australia">Australia</option>
+          <option value="India">India</option>
+          <option value="Germany">Germany</option>
+          <option value="France">France</option>
+          <!-- Add more countries as needed -->
+        </select>
+
+        <label>Gender:</label>
+        <label><input type="checkbox" name="gender" value="male" /> Male</label>
+        <label
+          ><input type="checkbox" name="gender" value="female" /> Female</label
+        >
+        <div class="profession">
+          <label for="profession">Profession:</label>
+          <input type="text" id="profession" required />
+        </div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+
+        <label for="mobile">Mobile Number:</label>
+        <input type="tel" id="mobile" required />
+
+        <div class="buttons">
+          <button class="submit-button" type="button" onclick="validateForm()">
+            Submit
+          </button>
+          <button class="reset-button" type="reset">Reset</button>
+        </div>
+      </form>
+    </div>
+    <div id="popup" class="popup">
+      <div class="popup-content" id="popup-content"></div>
+      <span class="close" onclick="closePopup()">&times;</span>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
